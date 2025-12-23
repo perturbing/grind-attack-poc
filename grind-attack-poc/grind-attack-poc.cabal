@@ -1,0 +1,19 @@
+cabal-version: 3.4
+name:          grind-attack-poc
+version:       0.1.0.0
+license:       Apache-2.0
+build-type:    Simple
+
+library
+  hs-source-dirs:  lib
+  exposed-modules: Lib
+  build-depends:
+    , base                         >=4.9   && <5
+    , cardano-crypto-class
+
+executable exec
+  main-is:        App.hs
+  hs-source-dirs: app
+  build-depends:
+    , base                     >=4.9   && <5
+    , grind-attack-poc
